@@ -86,11 +86,12 @@ git clone https://github.com/VidalYC/Trino_Tutorial.git
 ```
 
 
-<img width="578" height="112" alt="image" src="https://github.com/user-attachments/assets/03daa6bc-fbf7-4cd3-970e-dfc3e026a4f7" />
+<img width="582" height="112" alt="image" src="https://github.com/user-attachments/assets/e9e81f9c-6db7-46ca-8567-c3cf54fbc9de" />
+
 
 
 ```bash
-cd trino-lab
+cd TrinoLab
 ```
 
 ### 2. 🔥 Iniciar los servicios
