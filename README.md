@@ -185,26 +185,26 @@ ORDER BY total_sales DESC;
 ```sql
 -- Ver todas las órdenes
 SELECT * FROM mongodb.shop.orders;
-
+```
 
 <img width="599" height="369" alt="image" src="https://github.com/user-attachments/assets/472392bd-9806-4fda-97ba-2f9794232550" />
 
-
+```
 -- Extraer información de items anidados
 SELECT _id, country, total, item.sku, item.qty
 FROM mongodb.shop.orders
 CROSS JOIN UNNEST(items) AS t(item);
-
+```
 
 <img width="466" height="654" alt="image" src="https://github.com/user-attachments/assets/696b4e9e-53c7-4f46-8f53-6f920c55c00e" />
 
-
+```
 -- Agregación por país desde MongoDB
 SELECT country, COUNT(*) as total_orders, SUM(total) as total_sales
 FROM mongodb.shop.orders
 GROUP BY country
 ORDER BY total_sales DESC;
-
+```
 
 <img width="615" height="256" alt="image" src="https://github.com/user-attachments/assets/0ad5278f-1cda-49e0-acdb-2fbaeccb97cb" />
 
