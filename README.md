@@ -82,7 +82,7 @@ Ambas fuentes contienen los mismos datos de prueba con 15 órdenes de diferentes
 ### 1. 📂 Clonar y navegar al directorio
 
 ```bash
-git clone https://github.com/VidalYC/Trino_Tutorial.git
+git clone https://github.com/VidalYC/TrinoLab.git
 ```
 
 
