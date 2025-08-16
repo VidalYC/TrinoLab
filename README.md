@@ -210,9 +210,9 @@ ORDER BY total_sales DESC;
 
 
 ```
-
+```
 ### ⚡ Consultas Cross-Database (¡El poder de Trino!)
-
+```
 ```sql
 -- Comparar totales entre MySQL y MongoDB
 SELECT 
@@ -230,7 +230,7 @@ JOIN (
   FROM mongodb.shop.orders
   GROUP BY country
 ) mg ON m.country = mg.country;
-
+```
 
 <img width="487" height="414" alt="image" src="https://github.com/user-attachments/assets/22861f44-a239-4362-932d-68cbc00555c1" />
 
