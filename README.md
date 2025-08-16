@@ -198,7 +198,7 @@ ORDER BY total_sales DESC;
 
 
 ```
-
+```
 ### 🍃 Consultar datos de MongoDB
 
 ```sql
