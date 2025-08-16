@@ -104,10 +104,7 @@ trino-lab/
 git clone https://github.com/VidalYC/TrinoLab.git
 ```
 
-
 <img width="582" height="112" alt="image" src="https://github.com/user-attachments/assets/e9e81f9c-6db7-46ca-8567-c3cf54fbc9de" />
-
-
 
 ```bash
 cd TrinoLab
@@ -119,10 +116,7 @@ cd TrinoLab
 docker-compose up -d
 ```
 
-
 <img width="1225" height="435" alt="image" src="https://github.com/user-attachments/assets/3123d1df-bb2e-460e-9cc6-efbb44d4da75" />
-
-
 
 Este comando iniciará todos los contenedores en segundo plano:
 - Trino se iniciará después de que MySQL y MongoDB estén listos
@@ -134,10 +128,7 @@ Este comando iniciará todos los contenedores en segundo plano:
 docker-compose ps
 ```
 
-
 <img width="1349" height="68" alt="image" src="https://github.com/user-attachments/assets/df2c9138-a244-46c5-a5ea-0a4115e3de78" />
-
-
 
 Deberías ver los tres contenedores ejecutándose:
 - `trino` (puerto 8080)
@@ -151,12 +142,12 @@ Deberías ver los tres contenedores ejecutándose:
 ### 💻 Interfaz Web (coloca cualquier usuario)
 Abre tu navegador y ve a: http://localhost:8080
 
-
 <img width="764" height="376" alt="image" src="https://github.com/user-attachments/assets/d5df8548-2e93-4e67-b9d8-408ad4774a6e" />
+
 <img width="1266" height="641" alt="image" src="https://github.com/user-attachments/assets/d860c762-6edf-47a6-97c4-3a99d46ff245" />
 
 ### 🖥️ Cliente CLI de Trino
-También puedes usar el cliente CLI (donde ejecutaras consultas SQL) ejecutando:
+También puedes usar el cliente CLI (donde ejecutarás consultas SQL) ejecutando:
 
 ```bash
 docker exec -it trino trino
@@ -175,7 +166,7 @@ SELECT * FROM mysql.demo.orders;
 
 <img width="437" height="409" alt="image" src="https://github.com/user-attachments/assets/324d1341-f86b-4c3b-830b-5631036ef59b" />
 
-```
+```sql
 -- Ver items por orden
 SELECT o.id, o.country, o.total, oi.sku, oi.qty
 FROM mysql.demo.orders o
@@ -185,8 +176,7 @@ ORDER BY o.id;
 
 <img width="495" height="571" alt="image" src="https://github.com/user-attachments/assets/8ce1f38d-3afb-40c2-a953-829a0a2ade7c" />
 
-
-```
+```sql
 -- Agregación por país
 SELECT country, COUNT(*) as total_orders, SUM(total) as total_sales
 FROM mysql.demo.orders
@@ -196,9 +186,6 @@ ORDER BY total_sales DESC;
 
 <img width="632" height="266" alt="image" src="https://github.com/user-attachments/assets/b0494377-f013-4278-ad48-2342bd2c536f" />
 
-
-```
-```
 ### 🍃 Consultar datos de MongoDB
 
 ```sql
@@ -208,7 +195,7 @@ SELECT * FROM mongodb.shop.orders;
 
 <img width="599" height="369" alt="image" src="https://github.com/user-attachments/assets/472392bd-9806-4fda-97ba-2f9794232550" />
 
-```
+```sql
 -- Extraer información de items anidados
 SELECT _id, country, total, item.sku, item.qty
 FROM mongodb.shop.orders
@@ -217,7 +204,7 @@ CROSS JOIN UNNEST(items) AS t(item);
 
 <img width="466" height="654" alt="image" src="https://github.com/user-attachments/assets/696b4e9e-53c7-4f46-8f53-6f920c55c00e" />
 
-```
+```sql
 -- Agregación por país desde MongoDB
 SELECT country, COUNT(*) as total_orders, SUM(total) as total_sales
 FROM mongodb.shop.orders
@@ -227,9 +214,6 @@ ORDER BY total_sales DESC;
 
 <img width="615" height="256" alt="image" src="https://github.com/user-attachments/assets/0ad5278f-1cda-49e0-acdb-2fbaeccb97cb" />
 
-
-```
-```
 ### ⚡ Consultas Cross-Database (¡El poder de Trino!)
 
 ```sql
@@ -253,14 +237,11 @@ JOIN (
 
 <img width="487" height="414" alt="image" src="https://github.com/user-attachments/assets/22861f44-a239-4362-932d-68cbc00555c1" />
 
+### 🌐 Monitoreo Web
+En la interfaz web deberías ir visualizando las consultas que ejecutas en la terminal:
 
-
-```
-
-### 🌐 En la web deberias ir visualizando las consultas que ejecutas en la terminal.
 <img width="1238" height="991" alt="image" src="https://github.com/user-attachments/assets/8685fcd0-a221-40b6-9c92-23ad58588dc8" />
 
-```
 ---
 
 ## 🛠️ Comandos Útiles
