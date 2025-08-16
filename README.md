@@ -231,7 +231,7 @@ ORDER BY total_sales DESC;
 ```
 ```
 ### ⚡ Consultas Cross-Database (¡El poder de Trino!)
-```
+
 ```sql
 -- Comparar totales entre MySQL y MongoDB
 SELECT 
