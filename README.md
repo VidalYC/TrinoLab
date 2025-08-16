@@ -238,7 +238,7 @@ JOIN (
 
 ```
 
-###🌐 En la web deberias ir visualizando las consultas que ejecutas en la terminal.
+### 🌐 En la web deberias ir visualizando las consultas que ejecutas en la terminal.
 <img width="1238" height="991" alt="image" src="https://github.com/user-attachments/assets/8685fcd0-a221-40b6-9c92-23ad58588dc8" />
 
 
