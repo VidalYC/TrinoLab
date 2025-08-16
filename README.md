@@ -70,6 +70,25 @@ Ambas fuentes contienen los mismos datos de prueba con 15 órdenes de diferentes
 
 ---
 
+## 📁 Estructura del Proyecto
+
+```
+trino-lab/
+├── docker-compose.yml          # 🐳 Orquestación de servicios
+├── conf/
+│   └── hive-site.xml          # ⚙️ Configuración del metastore (no usado actualmente)
+├── trino/
+│   └── etc/catalog/
+│       ├── mysql.properties   # 🐬 Conector MySQL
+│       └── mongodb.properties # 🍃 Conector MongoDB
+├── mysql/
+│   └── init.sql              # 🗃️ Script de inicialización de MySQL
+└── mongo/
+    └── init.js               # 📄 Script de inicialización de MongoDB
+```
+
+---
+
 ## ✅ Requisitos Previos
 
 - Docker y Docker Compose instalados
@@ -241,26 +260,7 @@ JOIN (
 ### 🌐 En la web deberias ir visualizando las consultas que ejecutas en la terminal.
 <img width="1238" height="991" alt="image" src="https://github.com/user-attachments/assets/8685fcd0-a221-40b6-9c92-23ad58588dc8" />
 
-
----
-
-## 📁 Estructura del Proyecto
-
 ```
-trino-lab/
-├── docker-compose.yml          # 🐳 Orquestación de servicios
-├── conf/
-│   └── hive-site.xml          # ⚙️ Configuración del metastore (no usado actualmente)
-├── trino/
-│   └── etc/catalog/
-│       ├── mysql.properties   # 🐬 Conector MySQL
-│       └── mongodb.properties # 🍃 Conector MongoDB
-├── mysql/
-│   └── init.sql              # 🗃️ Script de inicialización de MySQL
-└── mongo/
-    └── init.js               # 📄 Script de inicialización de MongoDB
-```
-
 ---
 
 ## 🛠️ Comandos Útiles
