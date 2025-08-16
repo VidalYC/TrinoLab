@@ -152,28 +152,28 @@ docker exec -it trino trino
 ```sql
 -- Ver todas las órdenes
 SELECT * FROM mysql.demo.orders;
-
+```
 
 <img width="437" height="409" alt="image" src="https://github.com/user-attachments/assets/324d1341-f86b-4c3b-830b-5631036ef59b" />
 
-
+```
 -- Ver items por orden
 SELECT o.id, o.country, o.total, oi.sku, oi.qty
 FROM mysql.demo.orders o
 JOIN mysql.demo.order_items oi ON o.id = oi.order_id
 ORDER BY o.id;
-
+```
 
 <img width="495" height="571" alt="image" src="https://github.com/user-attachments/assets/8ce1f38d-3afb-40c2-a953-829a0a2ade7c" />
 
 
-
+```
 -- Agregación por país
 SELECT country, COUNT(*) as total_orders, SUM(total) as total_sales
 FROM mysql.demo.orders
 GROUP BY country
 ORDER BY total_sales DESC;
-
+```
 
 <img width="632" height="266" alt="image" src="https://github.com/user-attachments/assets/b0494377-f013-4278-ad48-2342bd2c536f" />
 
